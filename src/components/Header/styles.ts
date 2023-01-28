@@ -12,16 +12,56 @@ export const Container = styled('header', {
   right: 0,
   zIndex: 999,
 
-  nav: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '$4',
+  '@media (max-width: 425px)': {
+    '> img': {
+      width: '150px',
+    },
+  },
+})
+
+export const Nav = styled('nav', {
+  display: 'flex',
+  alignItems: 'center',
+  gap: '$4',
+
+  a: {
+    textTransform: 'uppercase',
+    textDecoration: 'none',
+    fontWeight: 'bold',
+  },
+
+  '@media (max-width: 1024px)': {
+    position: 'fixed',
+    inset: '0',
+    backdropFilter: 'blur(14px)',
+    background: 'rgba(0,0,0,0.3)',
+    flexDirection: 'column',
+    justifyContent: 'center',
 
     a: {
-      textTransform: 'uppercase',
-      textDecoration: 'none',
-      fontWeight: 'bold',
+      color: '$white-100',
+      fontSize: '$xl',
     },
+
+    button: {
+      display: 'none',
+    },
+  },
+})
+
+export const ContainerButtons = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  gap: '$4',
+})
+
+export const MenuButton = styled('button', {
+  display: 'none',
+  fontSize: '$2xl',
+  zIndex: '29',
+
+  '@media (max-width: 1024px)': {
+    display: 'block',
   },
 })
 

@@ -105,8 +105,27 @@ export const LocalSection = styled('section', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
+  gap: '$4',
+
   iframe: {
     border: '0',
     borderRadius: 8,
+  },
+
+  '@media (max-width: 688px)': {
+    flexDirection: 'column',
+
+    iframe: {
+      width: '100%',
+    },
+
+    '> div': {
+      alignItems: 'center',
+      textAlign: 'center',
+
+      h2: {
+        maxWidth: 'unset',
+      },
+    },
   },
 })
