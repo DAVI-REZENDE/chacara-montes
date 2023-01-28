@@ -14,7 +14,8 @@ export const Container = styled('header', {
 
   nav: {
     display: 'flex',
-    gap: '8px',
+    alignItems: 'center',
+    gap: '$4',
 
     a: {
       textTransform: 'uppercase',
@@ -22,4 +23,19 @@ export const Container = styled('header', {
       fontWeight: 'bold',
     },
   },
+})
+
+export const ContainerAvatar = styled('button', {
+  padding: '$2',
+  borderRadius: '999px',
+  display: 'flex',
+  gap: '$4',
+  alignItems: 'center',
+  background: 'rgba(0,0,0,0.1)',
+})
+
+export const Avatar = styled('img', {
+  width: 40,
+  height: 40,
+  borderRadius: '50%',
 })

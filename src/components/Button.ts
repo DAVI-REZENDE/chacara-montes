@@ -23,7 +23,7 @@ export const Button = styled('button', {
   variants: {
     variant: {
       primary: {
-        background: '$brown',
+        background: '$red',
         color: '$white-100',
       },
 

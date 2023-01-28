@@ -1,7 +1,14 @@
 import { Button } from '@/components/Button'
+import { Gallery } from '@/components/Gallery'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
-import { Actions, Banner, Main, QuestionsSection } from '@/styles/home'
+import {
+  Actions,
+  Banner,
+  LocalSection,
+  Main,
+  QuestionsSection,
+} from '@/styles/home'
 import Image from 'next/image'
 
 export default function Home() {
@@ -10,23 +17,31 @@ export default function Home() {
       <Header />
       <Hero />
       <Main>
-        <section>
+        <section id="about">
           <h2>Um pouco sobre a chácara</h2>
 
           <p>
-            Lugar com bastante verde ar livre, piscina de 25 metros, campo de
-            futebol, area de jogo(sinuca,tenis de mesa,mesa de xadrez,dama,truco
-            e etc... Contém dois lagos, duas areas de churrasqueria)
+            Lugar com bastante verde ar livre. Piscina com 25m de cumprimento
+            por sete de largura tratada com ozônio e sauna. Campo de futebol,
+            área de jogo (sinuca, tênis de mesa, mesa de xadrez, dama, truco e
+            etc...)
           </p>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Temos acomodação para vinte e sete pessoas, mas muito espaço para
+            acomodar muito mais. São sete quartos sendo tres suítes e três com
+            ar condicionado.
+          </p>
+
+          <p>
+            Temos também motor gerador de energia pra uma eventual falta da
+            mesma.
+          </p>
+
+          <p>
+            Dois quiosques, duas churrasqueiras, cozinha completa com fogão
+            industrial com seis bocas com forno, micro-ondas, dois freezer, uma
+            geladeira grande e outros utensílios.
           </p>
         </section>
 
@@ -38,20 +53,29 @@ export default function Home() {
           </div>
         </Banner>
 
-        <QuestionsSection>
-          <Actions>
-            <h2>Duvidas? Entre em contato com a gente.</h2>
-            <Button>Mensagem por whatsapp</Button>
-            <Button>Enviar por e-mail</Button>
-          </Actions>
+        <Gallery />
 
-          <Image
-            src="/assets/field.png"
-            width={343.79}
-            height={200}
-            alt="Campo de futeboll"
-          />
+        <QuestionsSection id="doubt">
+          <h2>Duvidas? Entre em contato com a gente.</h2>
+          <Button>Mensagem por whatsapp</Button>
+          <Button>Enviar por e-mail</Button>
         </QuestionsSection>
+
+        <LocalSection id="local">
+          <div>
+            <h2>Onde estamos.</h2>
+            <p>Estamos a 45km de Goiânia. Próximo a cidade de Inhumas.</p>
+          </div>
+
+          <iframe
+            name="oi"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3827.4310223451894!2d-49.55244728513718!3d-16.402921688675523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTbCsDI0JzEwLjUiUyA0OcKwMzMnMDAuOSJX!5e0!3m2!1spt-BR!2sbr!4v1674931465469!5m2!1spt-BR!2sbr"
+            width="400"
+            height="300"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          />
+        </LocalSection>
       </Main>
     </>
   )

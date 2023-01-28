@@ -1,4 +1,6 @@
 export const colors = {
+  'brown-100': '#3F372A10',
+  'brown-200': '#3F372A30',
   brown: '#3F372A',
   'white-100': '#F7F7F7',
   yellow: '#DEBC63',

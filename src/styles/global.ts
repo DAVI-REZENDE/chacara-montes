@@ -7,6 +7,7 @@ export const globalStyles = globalCss({
     boxSizing: 'border-box',
     fontFamily: 'Roboto, sans-serif',
     color: '$brown',
+    scrollBehavior: 'smooth',
   },
 
   body: {
