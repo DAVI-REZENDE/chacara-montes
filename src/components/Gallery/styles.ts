@@ -7,9 +7,12 @@ import {
 export const Container = styled('section', {
   padding: '$8',
   height: '95vh',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
 
   h2: {
-    width: '100%',
     textAlign: 'center',
   },
 })
