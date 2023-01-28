@@ -2,14 +2,7 @@ import { Button } from '@/components/Button'
 import { Gallery } from '@/components/Gallery'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
-import {
-  Actions,
-  Banner,
-  LocalSection,
-  Main,
-  QuestionsSection,
-} from '@/styles/home'
-import Image from 'next/image'
+import { Banner, LocalSection, Main, QuestionsSection } from '@/styles/home'
 
 export default function Home() {
   return (
@@ -73,7 +66,7 @@ export default function Home() {
             width="400"
             height="300"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            // referrerpolicy="no-referrer-when-downgrade"
           />
         </LocalSection>
       </Main>
