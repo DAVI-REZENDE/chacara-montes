@@ -67,11 +67,11 @@ export const MenuButton = styled('button', {
 
 export const ContainerAvatar = styled('button', {
   padding: '$2',
-  borderRadius: '999px',
+  borderRadius: 4,
   display: 'flex',
-  gap: '$4',
+  gap: '$2',
   alignItems: 'center',
-  background: 'rgba(0,0,0,0.1)',
+  background: '$zinc-200',
 })
 
 export const Avatar = styled('img', {

@@ -1,3 +1,5 @@
+import { ComponentProps, ElementType } from 'react'
+
 import { styled } from '@/styles/defaultTheme'
 
 export const Button = styled('button', {
@@ -48,3 +50,7 @@ export const Button = styled('button', {
     variant: 'primary',
   },
 })
+
+export interface ButtonProps extends ComponentProps<typeof Button> {
+  as?: ElementType
+}

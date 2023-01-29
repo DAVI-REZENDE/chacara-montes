@@ -34,23 +34,27 @@ export function Header() {
         alt="Chácara Montes"
       />
 
-      {menuIsVisible && (
-        <Nav>
-          <a onClick={handleToggleMenu} href="#about">
-            Sobre nos
-          </a>
-          <a onClick={handleToggleMenu} href="#gallery">
-            Galeria
-          </a>
-          <a onClick={handleToggleMenu} href="#doubt">
-            Duvidas
-          </a>
-          <a onClick={handleToggleMenu} href="#local">
-            Local
-          </a>
-          <Button variant="tertiary">Agendar evento</Button>
-        </Nav>
-      )}
+      <Nav
+        css={{
+          '@media (max-width: 1024px)': {
+            display: menuIsVisible ? 'flex' : 'none',
+          },
+        }}
+      >
+        <a onClick={handleToggleMenu} href="#about">
+          Sobre nos
+        </a>
+        <a onClick={handleToggleMenu} href="#gallery">
+          Galeria
+        </a>
+        <a onClick={handleToggleMenu} href="#doubt">
+          Duvidas
+        </a>
+        <a onClick={handleToggleMenu} href="#local">
+          Local
+        </a>
+        <Button variant="tertiary">Agendar evento</Button>
+      </Nav>
 
       <ContainerButtons>
         {session ? (

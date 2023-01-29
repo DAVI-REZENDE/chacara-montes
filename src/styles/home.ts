@@ -1,3 +1,4 @@
+import { Button } from '@/components/Button'
 import { styled } from './defaultTheme'
 
 export const Main = styled('main', {
@@ -127,5 +128,22 @@ export const LocalSection = styled('section', {
         maxWidth: 'unset',
       },
     },
+  },
+})
+
+export const NewScheduleButton = styled(Button, {
+  position: 'fixed',
+  bottom: '$4',
+  right: '$4',
+  borderRadius: '9999px',
+  padding: 0,
+  width: 45,
+  height: 45,
+  display: 'none',
+  alignItems: 'center',
+  justifyContent: 'center',
+
+  '@media (max-width: 1024px)': {
+    display: 'flex',
   },
 })

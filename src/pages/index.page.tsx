@@ -2,7 +2,14 @@ import { Button } from '@/components/Button'
 import { Gallery } from '@/components/Gallery'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
-import { Banner, LocalSection, Main, QuestionsSection } from '@/styles/home'
+import {
+  Banner,
+  LocalSection,
+  Main,
+  NewScheduleButton,
+  QuestionsSection,
+} from '@/styles/home'
+import { Plus } from 'phosphor-react'
 
 export default function Home() {
   return (
@@ -10,6 +17,10 @@ export default function Home() {
       <Header />
       <Hero />
       <Main>
+        <NewScheduleButton>
+          <Plus weight="bold" size="20px" color="#FFF" />
+        </NewScheduleButton>
+
         <section id="about">
           <h2>Um pouco sobre a chácara</h2>
 
@@ -50,7 +61,13 @@ export default function Home() {
 
         <QuestionsSection id="doubt">
           <h2>Duvidas? Entre em contato com a gente.</h2>
-          <Button>Mensagem por whatsapp</Button>
+          <Button
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=5562998404652&text=Ola%2C+estou+interessado%21"
+            as="a"
+          >
+            Mensagem por whatsapp
+          </Button>
           <Button>Enviar por e-mail</Button>
         </QuestionsSection>
 
