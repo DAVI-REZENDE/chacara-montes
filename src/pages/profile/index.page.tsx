@@ -1,6 +1,7 @@
 import { useSession, signOut } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import { ClockCounterClockwise, Plus, SignOut } from 'phosphor-react'
+import { useEffect } from 'react'
 import {
   Actions,
   Avatar,
@@ -11,11 +12,15 @@ import {
   ProfileInfo,
 } from './styles'
 
-export default function Profile() {
+export default function Userinfo() {
   const { data: session } = useSession()
   const router = useRouter()
 
-  if (!session) router.push('/')
+  useEffect(() => {
+    if (!session) {
+      router.push('/')
+    }
+  }, [session])
 
   return (
     <Container>
@@ -27,8 +32,8 @@ export default function Profile() {
         />
 
         <Info>
-          <strong>{session?.user?.name}</strong>
-          <span>{session?.user?.email}</span>
+          <strong>{session?.user?.name ?? ''}</strong>
+          <span>{session?.user?.email ?? ''}</span>
         </Info>
 
         <Actions>
