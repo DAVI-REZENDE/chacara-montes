@@ -66,7 +66,7 @@ export const MenuButton = styled('button', {
 })
 
 export const ContainerAvatar = styled('button', {
-  padding: '$2',
+  padding: '$2 $4',
   borderRadius: 4,
   display: 'flex',
   gap: '$2',
